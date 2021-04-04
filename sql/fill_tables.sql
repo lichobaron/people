@@ -1,0 +1,1 @@
+INSERT INTO person (fullname, birth) VALUES ('Carlos Baron', now());

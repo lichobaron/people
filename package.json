@@ -1,0 +1,36 @@
+{
+  "name": "people",
+  "version": "1.0.0",
+  "description": "Node.js and Postgres with Docker",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm run build:watch\" \"npm run start:dev\"",
+    "start": "node dist/index.js",
+    "start:dev": "nodemon --inspect=0.0.0.0:9229 dist/index.js",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lichobaron/people.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/lichobaron/people#readme",
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.16.1",
+    "@types/node": "^11.13.4",
+    "@types/pg": "^7.4.14",
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "pg": "^7.9.0",
+    "typescript": "^3.4.3"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.11"
+  }
+}
