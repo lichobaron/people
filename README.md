@@ -1,7 +1,9 @@
 # People CRUD with postgres, express and angular
 
 ## Requeriments
-* Nodejs (latest stable)
+* Nodejs
+* Docker
+* Docker-compose
 
 ## Backend
 ### Run
