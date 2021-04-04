@@ -7,7 +7,7 @@ jobs:
       name: node/default
     steps:
       - checkout
-          path: ~/people/people-services
+          path: ~/people
       - run: ls
       - run: npm ci
       - run: npm run build
