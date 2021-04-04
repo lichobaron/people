@@ -8,3 +8,6 @@
 ```
 code
 ```
+
+## Angular guide:
+https://bezkoder.com/angular-10-crud-app/
