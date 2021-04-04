@@ -3,11 +3,11 @@ orbs:
   node: circleci/node@1.1
 jobs:
   build:
+    working_directory: ~/people/people-services
     executor:
       name: node/default
     steps:
       - checkout
-          path: ~/people
       - run: ls
       - run: npm ci
       - run: npm run build
