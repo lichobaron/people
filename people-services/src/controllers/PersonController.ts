@@ -21,21 +21,22 @@ class PersonController extends AbstractController {
       res.send( result );
     });
 
-    /*
-    body example:
-    {
-      "fullname": "'Jorge Rodriguez'",
-      "birth": "now()"
-    }
-    */
     this.app.post( PEOPLE_ROUTE, async (req: any, res: any) => {
       const person: Person = {
         id: "null",
-        properties: req.body
+        properties: this.formatBody( req.body )
       };
       const result = await personDao.addPerson( person );
       res.send( result );
     });
+  };
+
+  private formatBody = ( body: any ) => {
+    const { year, month, day } = body.birth;
+    return {
+      fullname: "'" + body.fullname + "'",
+      birth: "make_date(" + year +"," + month + "," + day + ")"
+    };
   };
 }
 

@@ -1,1 +1,1 @@
-INSERT INTO person (fullname, birth) VALUES ('Carlos Baron', now());
+INSERT INTO person (fullname, birth) VALUES ('Carlos Baron', make_date(1997,9,5));
