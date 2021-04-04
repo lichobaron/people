@@ -3,12 +3,10 @@ orbs:
   node: circleci/node@1.1
 jobs:
   build:
+    working_directory: ~/people-services
     executor:
       name: node/default
     steps:
-      - run: ls
-      - run: pwd
-      - run: cd ../people-services
       - run: npm ci
       - run: npm run build
       - run: npm run test
