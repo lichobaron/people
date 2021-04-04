@@ -6,6 +6,7 @@ jobs:
     executor:
       name: node/default
     steps:
+      - run: ls
       - run: pwd
       - run: cd ../people-services
       - run: npm ci
